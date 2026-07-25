@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
-    --primary-color: blue;
-    --primary-text-color: black;
+    --primary-color: rgb(0, 0, 96,1);
+    --primary-text-color: rgb(0, 0, 96,1);
     --secondary-text-color: white;
+    --tertiary--text-color: rgb(125, 123, 123);
 }
 
 * {
@@ -10,16 +13,26 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: "Noto Sans Georgian", "Poppins", sans-serif;
+}
+
 #cv_container {
     display: flex;
     max-width: 595px;
     min-height: 842px;
     margin: 50px auto;
-    box-shadow: 2px 2px 2px black;
+    box-shadow: 0.5rem 0.5rem 3rem black;
 }
 
 #personnal_detail {
     padding: 15px 25px;
+    background-color: var(--primary-color);
+    color: var(--secondary-text-color);
+}
+
+#personnal_detail h3 {
+    color: var(--secondary-text-color);
 }
 
 #photo {
@@ -27,14 +40,44 @@
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    background-image: url(https://placehold.co/600x400);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 main {
     padding: 15px 10px;
 }
 
+#cv_title {
+    display: flex;
+    flex-direction: column;
+}
+
+#cv_title h1{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#cv_title p {
+    color: var(--tertiary--text-color);
+}
+
 .cv_section {
     margin: 25px 0;
+}
+
+.cv_section h3 {
+    color: var(--primary-text-color);
+}
+
+.cv_section p {
+    color: var(--tertiary--text-color);
+}
+
+.cv_section #personnal_desc {
+    color: black;
 }
 
 li {
@@ -42,14 +85,22 @@ li {
 }
 
 .title_desc {
-    display: flex;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    gap: 10px;
     justify-content: space-between;
 }
 
 .cv_section hr {
     margin: 5px 0;
-    height: 2.5px;
+    height: 5px;
+    border: none;
     background-color: aquamarine;
+}
+
+.cv_date {
+    color: var(--tertiary--text-color);
+    font-size: small;
 }
 
 @media (max-width: 700px){
