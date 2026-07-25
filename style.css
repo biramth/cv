@@ -1,0 +1,71 @@
+:root {
+    --primary-color: blue;
+    --primary-text-color: black;
+    --secondary-text-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#cv_container {
+    display: flex;
+    max-width: 595px;
+    min-height: 842px;
+    margin: 50px auto;
+    box-shadow: 2px 2px 2px black;
+}
+
+#personnal_detail {
+    padding: 15px 25px;
+}
+
+#photo {
+    background-color: gray;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+main {
+    padding: 15px 10px;
+}
+
+.cv_section {
+    margin: 25px 0;
+}
+
+li {
+    list-style: none;
+}
+
+.title_desc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cv_section hr {
+    margin: 5px 0;
+    height: 2.5px;
+    background-color: aquamarine;
+}
+
+@media (max-width: 700px){
+    #cv_container{
+        flex-direction: column;
+        box-shadow: none;
+        margin: 0 10px;
+    }
+
+    #personnal_detail{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #photo {
+        align-self: center;
+    }
+}
